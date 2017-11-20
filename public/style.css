@@ -1,10 +1,11 @@
 #apps_container{
+  width:100%;
 }
 #gift_card_app{
-
+  width:50%;
 }
 #contact_list_app{
-
+  width:50%;
 }
 #gift_card_container {
   position: relative;

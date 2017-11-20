@@ -20,6 +20,7 @@
     document.getElementById('gift_card_app').innerHTML = mainWrapper.outerHTML
   }
   window.onload = () => {
+    console.log('dom is loaded')
     renderCard()
   }
 })()
