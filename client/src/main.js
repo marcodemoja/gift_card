@@ -26,7 +26,9 @@ const renderCard = () => {
 }
 
 const fetchContacts = () => {
-  api.get('/tests/2/contacts.json', (err, res, data) => {
+  api.get('/tests/2/contacts.json', {
+    mode: 'no-cors'
+  }, (err, res, data) => {
     console.log(data, 'data fetched')
   })
 }
