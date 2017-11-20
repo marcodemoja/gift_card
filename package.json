@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "build": "babel --presets es2015 client/src --out-file public/main.min.js",
+    "build": "babel --presets es2015 client/src --out-file public/main.min.js --source-maps",
     "start": "npm run build && node server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

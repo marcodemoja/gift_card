@@ -1,5 +1,5 @@
 (() => {
-  window.onload = () => {
+  const renderCard = () => {
     const mainWrapper = document.createElement('div'),
       cardContainer = document.createElement('div'),
       frontSide = document.createElement('div'),
@@ -17,6 +17,9 @@
 
     mainWrapper.innerHTML = cardContainer.outerHTML
 
-    document.getElementById('app_root').innerHTML = mainWrapper.outerHTML
+    document.getElementById('gift_card_app').innerHTML = mainWrapper.outerHTML
+  }
+  window.onload = () => {
+    renderCard()
   }
 })()

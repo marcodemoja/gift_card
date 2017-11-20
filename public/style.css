@@ -1,7 +1,15 @@
+#apps_container{
+}
+#gift_card_app{
+
+}
+#contact_list_app{
+
+}
 #gift_card_container {
   position: relative;
   margin: 10px auto;
-  width: 300px;
+  width: 400px;
   height: auto;
   z-index: 1;
   box-shadow: -5px 5px 5px #aaa;
@@ -17,7 +25,7 @@
 }
 
 #gift_card_card img{
-  width:300px;
+  width:400px;
   height:auto;
 }
 
