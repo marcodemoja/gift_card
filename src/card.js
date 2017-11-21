@@ -1,10 +1,7 @@
-import API from 'fetch-api'
+import cardBack from './images/card-back.png'
+import cardFront from './images/card-front.png'
 
-let api = new API({
-  baseURI: 'https://retailer.clevergift.com'
-})
-
-const renderCard = () => {
+export default () => {
   const mainWrapper = document.createElement('div'),
     cardContainer = document.createElement('div'),
     frontSide = document.createElement('div'),
@@ -16,25 +13,11 @@ const renderCard = () => {
   frontSide.setAttribute('class', 'front face')
   backSide.setAttribute('class', 'back face center')
 
-  frontSide.innerHTML = '<img src="images/card-front.png" />'
-  backSide.innerHTML = '<img src="images/card-back.png" />'
+  frontSide.innerHTML = '<img src="public/' + cardFront + '" />'
+  backSide.innerHTML = '<img src="public/' + cardBack + '" />'
   cardContainer.innerHTML = frontSide.outerHTML + backSide.outerHTML
 
   mainWrapper.innerHTML = cardContainer.outerHTML
 
   document.getElementById('gift_card_app').innerHTML = mainWrapper.outerHTML
-}
-
-const fetchContacts = () => {
-  api.get('/tests/2/contacts.json', {
-    mode: 'no-cors'
-  }, (err, res, data) => {
-    console.log(data, 'data fetched')
-  })
-}
-
-window.onload = () => {
-  console.log('dom is loaded')
-  renderCard()
-  fetchContacts()
 }

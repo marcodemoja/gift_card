@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "build": "npm run webpack",
+    "build": "set NODE_ENV=production && webpack",
     "start": "npm run build && node server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack": "webpack"
+    "server": "node server/index.js",
+    "wp-server": "set NODE_ENV=dev && webpack --watch",
+    "dev": "concurrently --kill-others \"npm run server\" \"npm run wp-server\""
   },
   "author": "",
   "license": "ISC",
@@ -14,8 +16,11 @@
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "babel-runtime": "^6.26.0",
+    "es6-promise": "^4.1.1",
     "express": "^4.16.2",
-    "fetch-api": "0.0.2"
+    "fetch-api": "0.0.2",
+    "isomorphic-fetch": "^2.2.1",
+    "request": "^2.83.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -25,6 +30,17 @@
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "browser-sync": "^2.18.8",
+    "browser-sync-webpack-plugin": "^1.1.4",
+    "concurrently": "^3.5.0",
+    "copy-webpack-plugin": "^4.2.1",
+    "css-loader": "^0.26.4",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^1.1.5",
+    "node-sass": "^4.5.0",
+    "postcss-loader": "^2.0.8",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.19.0",
     "webpack": "^3.8.1"
   }
 }

@@ -1,11 +1,15 @@
 #apps_container{
   width:100%;
+  display:flex;
+  flex-direction:row;
 }
 #gift_card_app{
   width:50%;
+  order:1;
 }
 #contact_list_app{
   width:50%;
+  order:0;
 }
 #gift_card_container {
   position: relative;
