@@ -4,11 +4,11 @@ const api = new API({
   baseURI: 'http://localhost:3000'
 })
 
-export const fetchContactsList = (callback) => api.get('/get-contacts-list', (err, res, data) => {
+export const fetchContactsList = (cache, callback) => api.get('/get-contacts-list', (err, res, data) => {
   if (err) {
     throw err
   }
-  if (localStorage.getItem('contactsList') == null || JSON.parse(localStorage.getItem('contactsList')).length == 0) {
+  if (!cache) {
     localStorage.setItem('contactsList', data)
   }
   if (typeof callback === 'function') {
