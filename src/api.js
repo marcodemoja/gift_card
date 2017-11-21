@@ -8,8 +8,11 @@ const api = new API({
 export const fetchContactsList = (callback) => api.get('/get-contacts-list', (err, res, data) => {
   if (err)
     throw err
+  if (localStorage.getItem('contactsList') == null) {
+    localStorage.setItem('contactsList', data)
+  }
   if (typeof callback == 'function') {
-    callback(JSON.parse(data))
-  } else
-    console.log(data, 'data fetched')
+    callback(JSON.parse(localStorage.getItem('contactsList')))
+  }
+
 })
