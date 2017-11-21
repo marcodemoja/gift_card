@@ -10,7 +10,10 @@
 #contact_list_app{
   width:50%;
   order:0;
-  .filter_by_gender_btn,.sort_by_name_btn{
+  .isLoading{
+    opacity: 0.5;
+  }
+  .filter_by_gender_btn,.sort_by_name_btn,#reset{
     width:120px;
     height:40px;
     color: #cdcdcd;
