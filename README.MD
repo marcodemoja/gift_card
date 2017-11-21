@@ -1,5 +1,6 @@
-##Requirements
-nodeJs 6^ npm 3.10.3
+## Requirements
+* nodeJs 6^
+* npm 3.10.3
 
 ## to run the app:
 * open shell ( on windows cmd )
