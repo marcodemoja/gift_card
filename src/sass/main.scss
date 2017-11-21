@@ -10,6 +10,102 @@
 #contact_list_app{
   width:50%;
   order:0;
+  .filter_by_gender_btn,.sort_by_name_btn{
+    width:120px;
+    height:40px;
+    color: #cdcdcd;
+    text-transform: capitalize;
+    float:left;
+    margin-left:5px;
+  }
+  .filter_by_gender_btn{
+
+  }
+  .sort_by_name_btn{
+
+  }
+  .btn_label{
+    float:left;
+    font-family: 'Open Sans';
+    line-height:35px;
+    margin-left:12px;
+    font-size:16px;
+  }
+  .list_container{
+    background-color:#dedede;
+    list-style: none;
+    margin:0;
+    width:500px;
+    height:600px;
+    max-width: 500px;
+    padding:5px;
+    margin-top: 55px;
+    position:absolute;
+    overflow: auto;
+    li{
+      font-family: 'Roboto', sans-serif;
+      box-shadow:0px 5px 5px #888888;
+      margin:3px;
+      background-color:#fff;
+      float:left;
+      width:98%;
+      margin-bottom:12px;
+      border-radius: 5px;
+      .top_section{
+        float:left;
+        width:100%;
+        h4{
+          font-size:21px;
+          float:left;
+          width:72%;
+          float:right;
+        }
+        .avatar{
+          margin-left:21px;
+          margin-top:7px;
+          float:left;
+          background-color: #ccc;
+          background-size:cover;
+          width:80px;
+          height:80px;
+          border-radius: 70px;
+          -webkit-border-radius: 100px;
+          -moz-border-radius: 100px;
+        }
+      }
+      .bottom_section{
+        float:left;
+        width:100%;
+        background-color:#efefef;
+        margin-top:12px;
+        .left p,.left strong{
+          padding-left:21px;
+        }
+        .left p, .right p{
+          text-transform: uppercase;
+          color:#cdcdcd;
+          font-size:14px;
+          margin-top:8px;
+          margin-bottom:3px;
+        }
+        .left strong, .right strong{
+          font-size:14px;
+          color:#000;
+          line-height:28px;
+        }
+        .left{
+          width:60%;
+          float:left;
+          border-right:1px solid #ccc;
+        }
+        .right{
+          width: 35%;
+          float:right;
+
+        }
+      }
+    }
+  }
 }
 #gift_card_container {
   position: relative;

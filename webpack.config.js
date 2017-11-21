@@ -6,7 +6,6 @@ var CopyWebpackPlugin = require('copy-webpack-plugin')
 //const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 const IS_PROD = (process.env.NODE_ENV === 'production')
-const dirAssets = path.join(__dirname, '/src/css');
 
 const extractCSS = new ExtractTextPlugin({
   filename: "style.css",
